@@ -1,65 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P3 Constructions</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background-color: #f7f7f7;
-            color: #333;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            flex-direction: column;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P3 Constructions</title>
+  <style>
+    /* --- Global Styles --- */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(to bottom right, #fff8f0, #f8f8f8);
+      color: #333;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
 
-        h1 {
-            font-size: 3rem;
-            color: #d97706; /* nice orange shade */
-            margin-bottom: 10px;
-        }
+    /* --- Content Box --- */
+    .container {
+      background: #ffffff;
+      padding: 40px 60px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      max-width: 450px;
+      animation: fadeIn 1.2s ease;
+    }
 
-        p {
-            font-size: 1.2rem;
-            color: #666;
-        }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-        .loader {
-            margin-top: 30px;
-            border: 6px solid #ddd;
-            border-top: 6px solid #d97706;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-        }
+    /* --- Headings --- */
+    h1 {
+      font-size: 2.5rem;
+      color: #d97706;
+      margin-bottom: 10px;
+    }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+    p {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.6;
+    }
 
-        footer {
-            position: absolute;
-            bottom: 20px;
-            font-size: 0.9rem;
-            color: #999;
-        }
-    </style>
+    /* --- Loader --- */
+    .loader {
+      margin: 30px auto 10px;
+      border: 6px solid #ddd;
+      border-top: 6px solid #d97706;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* --- Social Links --- */
+    .social-icons {
+      margin-top: 25px;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      color: #d97706;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #b45309;
+    }
+
+    /* --- Footer --- */
+    footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 30px 25px;
+        width: 90%;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a2d9b6d3a4.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+  <div class="container">
     <h1>🚧 Coming Soon</h1>
-    <p>Our website is currently under construction.<br>
-       We’ll be live very soon!</p>
+    <p>Our new website is under construction.<br>We’re building something amazing for you!</p>
+
     <div class="loader"></div>
 
-    <footer>© 2025 P3 Constructions. All rights reserved.</footer>
-</body>
+    <div class="social-icons">
+      <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
 
+  <footer>© 2025 P3 Constructions. All rights reserved.</footer>
+</body>
 </html>
